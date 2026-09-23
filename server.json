@@ -1,5 +1,5 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.grynienm/kalkulatory-place",
   "description": "Polish payroll: gross↔net salary, hourly rates, tax brackets and social security rates, from a live public API",
   "repository": {
@@ -12,7 +12,9 @@
       "registryType": "npm",
       "identifier": "@kalkulatory-place/mcp",
       "version": "1.0.1",
-      "transport": { "type": "stdio" }
+      "transport": {
+        "type": "stdio"
+      }
     }
   ]
 }

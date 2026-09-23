@@ -1,6 +1,7 @@
 {
   "name": "@kalkulatory-place/mcp",
   "version": "1.0.1",
+  "mcpName": "io.github.grynienm/kalkulatory-place",
   "description": "MCP server for Polish payroll: gross↔net salary, hourly rates, tax brackets and social security rates (kalkulatory-place.pl)",
   "keywords": [
     "mcp",
