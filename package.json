@@ -1,0 +1,46 @@
+{
+  "name": "@kalkulatory-place/mcp",
+  "version": "1.0.1",
+  "description": "MCP server for Polish payroll: gross↔net salary, hourly rates, tax brackets and social security rates (kalkulatory-place.pl)",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "modelcontextprotocol",
+    "mcp-server",
+    "payroll",
+    "salary",
+    "poland",
+    "polish",
+    "tax",
+    "brutto",
+    "netto",
+    "pit",
+    "zus"
+  ],
+  "homepage": "https://kalkulatory-place.pl/mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grynienM/kalkulatory-place-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grynienM/kalkulatory-place-mcp/issues"
+  },
+  "author": "Bril Brothers Innovation Labs sp. z o.o.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "kalkulatory-place-mcp": "index.js"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

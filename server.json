@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.grynienm/kalkulatory-place",
+  "description": "Polish payroll: gross↔net salary, hourly rates, tax brackets and social security rates, from a live public API",
+  "repository": {
+    "url": "https://github.com/grynienM/kalkulatory-place-mcp",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@kalkulatory-place/mcp",
+      "version": "1.0.1",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Once a week: this server is a thin client over a live API, so the thing most likely to
+    # break is the API changing underneath it — and nothing in this repo would show that.
+    - cron: '17 6 * * 1'
+
+jobs:
+  handshake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm test
