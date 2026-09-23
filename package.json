@@ -35,7 +35,8 @@
   "files": [
     "index.js",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "NOTICE"
   ],
   "scripts": {
     "test": "node test.js"

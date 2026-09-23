@@ -86,7 +86,7 @@ Runs a real handshake against the published server: `initialize`, `tools/list`, 
 
 ## License
 
-Code: MIT. Data and calculations: CC BY 4.0 — when quoting a number, cite the URL from `zrodlo`.
+Code: [MIT](LICENSE). Data and calculations: CC BY 4.0 — when quoting a number, cite the URL from `zrodlo`. See [NOTICE](NOTICE).
 
 This is not tax advice. Figures are informational.
 

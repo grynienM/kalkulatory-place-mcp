@@ -1,0 +1,9 @@
+The source code in this repository is licensed under the MIT License (see LICENSE).
+
+The calculations and data served through https://kalkulatory-place.pl/api/v1/, which this
+server returns verbatim, are published by Bril Brothers Innovation Labs sp. z o.o. under
+CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+
+When quoting a figure, cite the URL returned in the `zrodlo` field of the response.
+
+These figures are informational and are not tax advice.
