@@ -1,0 +1,26 @@
+name: publish to MCP Registry
+
+# Wpis w oficjalnym rejestrze MCP (registry.modelcontextprotocol.io). Logowanie przez OIDC
+# GitHuba — bez tokenów w sekretach: rejestr ufa, że plik przyszedł z repo grynienM.
+# Po nim katalogi (glama, mcp.so, Smithery, PulseMCP) pobierają serwer same.
+# Uruchamia się przy zmianie server.json na main albo ręcznie.
+
+on:
+  push:
+    branches: [main]
+    paths: [server.json, .github/workflows/publish-mcp.yml]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: mcp-publisher
+        run: |
+          curl -sL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
+      - run: ./mcp-publisher login github-oidc
+      - run: ./mcp-publisher publish
