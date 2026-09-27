@@ -23,4 +23,9 @@ jobs:
         run: |
           curl -sL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
       - run: ./mcp-publisher login github-oidc
-      - run: ./mcp-publisher publish
+      - name: publish
+        run: |
+          ./mcp-publisher publish 2>&1 | tee out.txt; code=${PIPESTATUS[0]}
+          # Komunikat rejestru jako adnotacja — log kroku bez logowania do GitHuba nie jest czytelny.
+          [ $code -ne 0 ] && echo "::error::$(tr \"\n\" \" \" < out.txt)"
+          exit $code
