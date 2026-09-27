@@ -25,7 +25,10 @@ jobs:
       - run: ./mcp-publisher login github-oidc
       - name: publish
         run: |
-          ./mcp-publisher publish 2>&1 | tee out.txt; code=${PIPESTATUS[0]}
           # Komunikat rejestru jako adnotacja — log kroku bez logowania do GitHuba nie jest czytelny.
-          [ $code -ne 0 ] && echo "::error::$(tr \"\n\" \" \" < out.txt)"
-          exit $code
+          if ! ./mcp-publisher publish > out.txt 2>&1; then
+            cat out.txt
+            echo "::error::$(tr '\n' ' ' < out.txt)"
+            exit 1
+          fi
+          cat out.txt
